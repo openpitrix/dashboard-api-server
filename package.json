@@ -1,0 +1,26 @@
+{
+  "name": "dashboard-api-server",
+  "version": "0.1.0",
+  "description": "rest api server for openpitrix dashboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "docker build -t sunnyw/json-server .",
+    "start": "docker run -it -d --rm -p 3000:3000 -v $(pwd):/app --name api-server sunnyw/json-server",
+    "sh": "docker exec -it api-server sh"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "json-server",
+    "mocking",
+    "openpitrix"
+  ],
+  "author": "sunnyw <iwisunny@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "faker": "^4.1.0",
+    "json-server": "^0.12.1"
+  }
+}
