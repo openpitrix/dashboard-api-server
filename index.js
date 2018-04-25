@@ -1,12 +1,14 @@
-const faker=require('faker');
-const db=require('./data/db.json');
-
+// const faker=require('faker');
 // faker.locale = 'zh_CN';
 
-module.exports = function() {
-  // generate fake data
+const db = {
+  apps: require('./mock/apps'),
+  clusters: require('./mock/clusters'),
+  cluster_nodes: require('./mock/cluster_nodes'),
+  repos: require('./mock/repos'),
+  runtimes: require('./mock/runtimes')
+};
 
-  const now=+Date;
-  // return db;
+module.exports = function() {
   return db;
 };

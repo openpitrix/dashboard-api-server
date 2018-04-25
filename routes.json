@@ -1,0 +1,4 @@
+{
+  "/api/v1/*": "/$1",
+  "/apps/installed": "/apps?installed=true"
+}
