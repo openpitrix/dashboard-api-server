@@ -1588,9 +1588,9 @@ json-schema@0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/json-schema/-/json-schema-0.2.3.tgz#b480c892e59a2f05954ce727bd3f2a4e882f9e13"
 
-json-server@^0.12.1:
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/json-server/-/json-server-0.12.1.tgz#a52cf5ef1a5feb648c3f8cc022364d0050d29c74"
+json-server@^0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/json-server/-/json-server-0.12.2.tgz#2ae4de8de432e279f3374cc9f3882e49e29b35a0"
   dependencies:
     body-parser "^1.18.2"
     chalk "^2.3.0"
@@ -1608,7 +1608,7 @@ json-server@^0.12.1:
     morgan "^1.9.0"
     nanoid "^1.0.1"
     object-assign "^4.0.1"
-    please-upgrade-node "^3.0.1"
+    please-upgrade-node "^3.0.2"
     pluralize "^7.0.0"
     request "^2.83.0"
     server-destroy "^1.0.1"
@@ -2196,6 +2196,12 @@ please-upgrade-node@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/please-upgrade-node/-/please-upgrade-node-3.0.1.tgz#0a681f2c18915e5433a5ca2cd94e0b8206a782db"
 
+please-upgrade-node@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/please-upgrade-node/-/please-upgrade-node-3.0.2.tgz#7b9eaeca35aa4a43d6ebdfd10616c042f9a83acc"
+  dependencies:
+    semver-compare "^1.0.0"
+
 pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
@@ -2418,6 +2424,10 @@ safe-regex@^1.1.0:
 sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
+
+semver-compare@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/semver-compare/-/semver-compare-1.0.0.tgz#0dee216a1c941ab37e9efb1788f6afc5ff5537fc"
 
 semver-diff@^2.0.0:
   version "2.1.0"

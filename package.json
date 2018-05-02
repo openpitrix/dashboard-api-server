@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "docker build -t sunnyw/json-server .",
-    "start": "docker run -it -d --rm -p 3000:3000 -v $(pwd):/app --name api-server sunnyw/json-server",
+    "start": "docker run -it -d --rm -p 3000:3000 -v $(pwd):/app --name op-api-server sunnyw/json-server",
     "sh": "docker exec -it api-server sh",
     "lint": "prettier './*.{js,md}' -l",
     "precommit": "lint-staged"
@@ -33,6 +33,6 @@
   },
   "dependencies": {
     "faker": "^4.1.0",
-    "json-server": "^0.12.1"
+    "json-server": "^0.12.2"
   }
 }

@@ -1,4 +1,3 @@
 {
-  "/api/v1/*": "/$1",
-  "/apps/installed": "/apps?installed=true"
+  "/api/v1/*": "/$1"
 }
