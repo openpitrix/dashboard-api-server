@@ -29,10 +29,13 @@
   "devDependencies": {
     "husky": "^0.14.3",
     "lint-staged": "^7.0.4",
+    "nodemon": "^1.17.3",
     "prettier": "^1.12.1"
   },
   "dependencies": {
+    "express": "^4.16.3",
     "faker": "^4.1.0",
-    "json-server": "^0.12.2"
+    "json-server": "^0.12.2",
+    "lodash": "^4.17.10"
   }
 }

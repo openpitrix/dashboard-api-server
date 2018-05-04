@@ -1,6 +1,6 @@
 const faker = require('faker');
-const utils = require('../utils');
-const { totalCount } = require('../config');
+const gen = require('../../utils/gen');
+const { totalCount } = require('../../config');
 
 module.exports = (function() {
   const apps = [];
@@ -9,9 +9,9 @@ module.exports = (function() {
 
   for (let i = 0; i < totalCount; i++) {
     apps.push({
-      app_id: utils.genResourceId('app'),
+      app_id: gen.genResourceId('apps'),
       name: faker.random.arrayElement(demoNames),
-      repo_id: utils.genResourceId('repo'),
+      repo_id: gen.genResourceId('repos'),
       description: faker.lorem.paragraph(),
       status: faker.random.arrayElement(['active', 'pending', 'inacitve']),
       home: faker.internet.url(),

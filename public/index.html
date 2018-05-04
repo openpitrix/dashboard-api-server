@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <title>openpitrix mock server</title>
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <div class="container">
+        <h3>openpitrix mock api server</h3>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <div id="resources"></div>
+
+        <p>
+            To access and modify resources, you can use any HTTP method
+            <br>
+            <code>GET</code>
+            <code>POST</code>
+            <code>PUT</code>
+            <code>PATCH</code>
+            <code>DELETE</code>
+            <code>OPTIONS</code>
+        </p>
+
+        <div id="custom-routes"></div>
+    </div>
+</main>
+
+<script src="https://unpkg.com/mithril/mithril.min.js"></script>
+<script src="main.js"></script>
+</body>
+
+</html>
