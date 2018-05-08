@@ -6,7 +6,7 @@
 
 **Why create this repo ?**
 
-* This repo is based on `OpenPitrix api spec` (built with Swagger), while that api spec is just a design spec, no mock data.
+* This repo is based on `OpenPitrix api spec` (built with Swagger), while that api spec is just a design, no mock data.
   Since you can still use `curl` to request each swagger api endpoint to populate fake data, but it's verbose,
   you need hard-code fake data, not programmatically, lack of fun.
   Meanwhile data structure in swagger spec is not fully usable for our web app, sometimes missing fields, or unreasonable api design.
@@ -38,7 +38,7 @@ npm run build && npm start
 **Running in local**
 
 ```shell
-yarn && ./run.sh
+npm install && ./run.sh
 ```
 
 Then open your browser, visit: `http://localhost:3000`
@@ -49,7 +49,7 @@ Or use `curl`:
 curl localhost:3000/v1/apps
 ```
 
-Recommend use `Postman` to test api endpoint
+Recommend `Postman` to test api endpoint
 
 ## APIs
 
@@ -59,8 +59,8 @@ Recommend use `Postman` to test api endpoint
 ### /apps
 
 ```
-// retrive all apps
-// when filter, you can append query string: /apps?category=business
+// retrieve all apps
+// when filter result, you can append query string: /apps?category=business
 GET /apps
 
 // create an app
