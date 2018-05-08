@@ -4,8 +4,17 @@ const { totalCount } = require('../../config');
 
 module.exports = (function() {
   const apps = [];
-
   const demoNames = ['Kubernets', 'RandonDB', 'PostgreSQL', 'Spark', 'MySQL Plus', 'Redis'];
+  const categories = [
+    // 'top',
+    // 'essential',
+    'software',
+    'business',
+    'develop',
+    'operation',
+    'security',
+    'analysis'
+  ];
 
   for (let i = 0; i < totalCount; i++) {
     apps.push({
@@ -22,6 +31,8 @@ module.exports = (function() {
       sources: faker.internet.url(),
       readme: faker.internet.url(),
       chart_name: faker.random.words(),
+      category: faker.random.arrayElement(categories),
+      // tags: [],
       owner: faker.random.arrayElement(['system']),
       create_time: faker.date.past(),
       status_time: faker.date.recent(),
