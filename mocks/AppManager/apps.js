@@ -22,7 +22,14 @@ module.exports = (function() {
       name: faker.random.arrayElement(demoNames),
       repo_id: gen.genResourceId('repos'),
       description: faker.lorem.paragraph(),
-      status: faker.random.arrayElement(['active', 'pending', 'inacitve']),
+      status: faker.random.arrayElement([
+        'active',
+        'stopped',
+        'ceased',
+        'pending',
+        'suspended',
+        'deleted'
+      ]),
       home: faker.internet.url(),
       icon: faker.internet.avatar(),
       // add three images to screenshots

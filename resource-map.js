@@ -24,6 +24,21 @@ module.exports = {
     prefix: 'rt-',
     idKey: 'runtime_id'
   },
+  categories: {
+    singular: 'categorie',
+    prefix: 'ca-',
+    idKey: 'categorie_id'
+  },
+  users: {
+    singular: 'user',
+    prefix: 'user-',
+    idKey: 'user_id'
+  },
+  roles: {
+    singular: 'role',
+    prefix: 'role-',
+    idKey: 'role_id'
+  },
   app_versions: {
     singular: 'app_version',
     prefix: 'appv-',
