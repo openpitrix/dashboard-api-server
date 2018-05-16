@@ -1,34 +1,45 @@
 const faker = require('faker');
 const gen = require('../../utils/gen');
-const { totalCount } = require('../../config');
-
-const totalCount2 = 3;
 
 module.exports = (function() {
-  const resutlArr = [];
+  const roles = [];
   const nameArray = [
     'Redis Cloud',
     'Software Infrastructure',
     'PostgreSQL',
     'Software Infrastructure'
   ];
-  for (let i = 0; i < totalCount2; i++) {
-    resutlArr.push({
+  const images = [
+    [
+      faker.internet.avatar(),
+      faker.internet.avatar(),
+      faker.internet.avatar(),
+      faker.internet.avatar(),
+      faker.internet.avatar()
+    ],
+    [faker.internet.avatar(), faker.internet.avatar(), faker.internet.avatar()],
+    [faker.internet.avatar(), faker.internet.avatar()],
+    [
+      faker.internet.avatar(),
+      faker.internet.avatar(),
+      faker.internet.avatar(),
+      faker.internet.avatar(),
+      faker.internet.avatar(),
+      faker.internet.avatar(),
+      faker.internet.avatar()
+    ]
+  ];
+  for (let i = 0; i < 3; i++) {
+    roles.push({
       id: gen.genResourceId('roles'),
       name: faker.random.arrayElement(nameArray),
       description: faker.lorem.paragraph(),
-      idNo: 'id:d549a285-3859-4824-beb9-d80e6a',
-      imgArray: [
-        'http://via.placeholder.com/24x24',
-        'http://via.placeholder.com/24x24',
-        'http://via.placeholder.com/24x24',
-        'http://via.placeholder.com/24x24',
-        'http://via.placeholder.com/24x24'
-      ],
+      idNo: 'idNo_' + gen.genResourceId('roles'),
+      images: faker.random.arrayElement(images),
       created: faker.date.past(),
       last_modified: faker.date.recent()
     });
   }
 
-  return resutlArr;
+  return roles;
 })();

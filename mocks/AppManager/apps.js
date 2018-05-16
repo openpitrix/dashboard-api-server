@@ -5,6 +5,7 @@ const { totalCount } = require('../../config');
 module.exports = (function() {
   const apps = [];
   const demoNames = ['Kubernets', 'RandonDB', 'PostgreSQL', 'Spark', 'MySQL Plus', 'Redis'];
+  const status = ['active', 'stopped', 'ceased', 'pending', 'suspended', 'deleted'];
   const categories = [
     // 'top',
     // 'essential',
@@ -15,6 +16,7 @@ module.exports = (function() {
     'security',
     'analysis'
   ];
+  const owners = ['system', 'Samantha', 'Ethan', 'Simon'];
 
   for (let i = 0; i < totalCount; i++) {
     apps.push({
@@ -22,14 +24,7 @@ module.exports = (function() {
       name: faker.random.arrayElement(demoNames),
       repo_id: gen.genResourceId('repos'),
       description: faker.lorem.paragraph(),
-      status: faker.random.arrayElement([
-        'active',
-        'stopped',
-        'ceased',
-        'pending',
-        'suspended',
-        'deleted'
-      ]),
+      status: faker.random.arrayElement(status),
       home: faker.internet.url(),
       icon: faker.internet.avatar(),
       // add three images to screenshots
@@ -40,7 +35,7 @@ module.exports = (function() {
       chart_name: faker.random.words(),
       category: faker.random.arrayElement(categories),
       // tags: [],
-      owner: faker.random.arrayElement(['system']),
+      owner: faker.random.arrayElement(owners),
       create_time: faker.date.past(),
       status_time: faker.date.recent(),
       update_time: faker.date.recent()

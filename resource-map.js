@@ -25,9 +25,9 @@ module.exports = {
     idKey: 'runtime_id'
   },
   categories: {
-    singular: 'categorie',
+    singular: 'category',
     prefix: 'ca-',
-    idKey: 'categorie_id'
+    idKey: 'category_id'
   },
   users: {
     singular: 'user',
@@ -43,5 +43,15 @@ module.exports = {
     singular: 'app_version',
     prefix: 'appv-',
     idKey: 'version_id'
+  },
+  cluster_activities: {
+    singular: 'cluster_activity',
+    prefix: 'activity-',
+    idKey: 'activity_id'
+  },
+  statistics: {
+    singular: 'statistics',
+    prefix: 'statistics-',
+    idKey: 'statistic_id'
   }
 };

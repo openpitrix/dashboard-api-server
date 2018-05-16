@@ -3,26 +3,35 @@ const gen = require('../../utils/gen');
 const { totalCount } = require('../../config');
 
 module.exports = (function() {
-  const resutlArr = [];
-
+  const clusters = [];
   const demoNames = ['Kubernets', 'RandonDB', 'PostgreSQL', 'Spark', 'MySQL Plus', 'Redis'];
-  const demoNames2 = ['stopped', 'suspended', 'pending', 'active', 'ceased', 'deleted'];
-  const demoNames3 = ['Samantha', 'Ethan', 'Simon'];
+  const status = ['stopped', 'suspended', 'pending', 'active', 'ceased', 'deleted'];
+  const owners = ['Samantha', 'Ethan', 'Simon'];
+  const endpoints = ['Computer', 'Phone', 'Mac'];
+
   for (let i = 0; i < totalCount; i++) {
-    resutlArr.push({
-      id: gen.genResourceId('clusters'),
+    clusters.push({
+      cluster_id: gen.genResourceId('clusters'),
       name: faker.random.arrayElement(demoNames),
       description: faker.lorem.paragraph(),
       app_id: gen.genResourceId('apps'),
-      status: faker.random.arrayElement(demoNames2),
-      transition_status: faker.random.arrayElement(demoNames2),
-      latest_version: '0.0.2',
-      node_count: '3',
-      runtime: 'Pek3a Testing',
-      user: faker.random.arrayElement(demoNames3),
-      created: faker.date.past(),
-      last_modified: faker.date.recent()
+      version_id: 'version_' + gen.genResourceId('clusters'),
+      subnet_id: 'subnet_' + gen.genResourceId('clusters'),
+      vpc_id: 'vpc_' + gen.genResourceId('clusters'),
+      frontgate_id: 'frontgate_' + gen.genResourceId('clusters'),
+      cluster_type: { value: parseInt(Math.random() * 10) },
+      endpoints: faker.random.arrayElement(endpoints),
+      status: faker.random.arrayElement(status),
+      transition_status: faker.random.arrayElement(status),
+      metadata_root_access: true,
+      owner: faker.random.arrayElement(owners),
+      global_uuid: 'uuid_' + gen.genResourceId('clusters'),
+      upgrade_status: faker.random.arrayElement(status),
+      upgrade_time: faker.date.past(),
+      runtime_id: gen.genResourceId('runtimes'),
+      create_time: faker.date.past(),
+      status_time: faker.date.recent()
     });
   }
-  return resutlArr;
+  return clusters;
 })();
