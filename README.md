@@ -27,26 +27,33 @@
 
 * Front-end only generate fake json data, this repo will setup all `CRUD` methods automatically for each api endpoint.
 
-## Install
+## Usage
 
-**Running in docker**
+### 1. Install from docker hub
 
-```js
-npm run build && npm start
+```
+docker pull iwisunny/op-mock-server
+docker run --name op-mock -p 3000:3000 iwisunny/op-mock-server
 ```
 
-**Running in local**
+### 2. Build docker image from local
 
-```shell
+```
+npm run docker
+```
+
+### 3. Running in local
+
+```
 npm install && ./run.sh
 ```
 
-Then open your browser, visit: `http://localhost:3000`
+Then open your browser, visit: `http://localhost:3000/apps`
 
 Or use `curl`:
 
 ```
-curl localhost:3000/v1/apps
+curl localhost:3000/apps
 ```
 
 Recommend `Postman` to test api endpoint

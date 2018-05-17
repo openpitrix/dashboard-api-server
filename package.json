@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "docker build -t sunnyw/json-server .",
-    "start": "docker run -it -d --rm -p 3000:3000 -v $(pwd):/app --name op-api-server sunnyw/json-server",
-    "sh": "docker exec -it api-server sh",
+    "docker:image": "docker build -t sunnyw/op-mock-server .",
+    "docker:cont": "docker run -d --rm --name op-mock-server -p 3000:3000 sunnyw/op-mock-server",
+    "docker": "npm run pack && npm run docker:image && npm run docker:cont",
+    "dev": "./run.sh",
+    "sh": "docker exec -it op-mock-server sh",
     "lint": "prettier './*.{js,md}' -l",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "pack": "webpack --config webpack.config.js --progress"
   },
   "lint-staged": {
     "*.{js,md}": [
@@ -30,7 +33,9 @@
     "husky": "^0.14.3",
     "lint-staged": "^7.0.4",
     "nodemon": "^1.17.3",
-    "prettier": "^1.12.1"
+    "prettier": "^1.12.1",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
   },
   "dependencies": {
     "express": "^4.16.3",
