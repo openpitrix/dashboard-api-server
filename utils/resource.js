@@ -17,6 +17,9 @@ module.exports = {
    * @param req | express request object
    */
   getResourceNameFromRequest: req => {
-    return req.path.startsWith('/') ? req.path.substr(1) : req.path;
+    if (!(typeof req === 'object' && typeof req.path === 'string')) {
+      throw Error(`${req} should be express request object`);
+    }
+    return req.path.split('/')[0];
   }
 };

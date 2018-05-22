@@ -4,13 +4,13 @@
   "description": "rest api server for openpitrix dashboard",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest -c jest.config.json",
     "docker:image": "docker build -t sunnyw/op-mock-server .",
     "docker:cont": "docker run -d --rm --name op-mock-server -p 3000:3000 sunnyw/op-mock-server",
     "docker": "npm run pack && npm run docker:image && npm run docker:cont",
     "dev": "./run.sh",
     "sh": "docker exec -it op-mock-server sh",
-    "lint": "prettier './*.{js,md}' -l",
+    "lint": "prettier './{middlewares,mocks,utils,test}/**/*.{js,md}' -l",
     "precommit": "lint-staged",
     "pack": "webpack --config webpack.config.js --progress"
   },
@@ -31,6 +31,7 @@
   "license": "MIT",
   "devDependencies": {
     "husky": "^0.14.3",
+    "jest": "^22.4.4",
     "lint-staged": "^7.0.4",
     "nodemon": "^1.17.3",
     "prettier": "^1.12.1",

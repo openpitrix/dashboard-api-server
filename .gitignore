@@ -3,3 +3,5 @@ node_modules/
 .config/
 .ash_history
 build/
+
+coverage/

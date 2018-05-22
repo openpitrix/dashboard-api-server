@@ -1,3 +1,9 @@
-module.exports.gen = require('./gen');
-module.exports.logger = require('./logger');
-module.exports.resource = require('./resource');
+const gen = require('./gen');
+const logger = require('./logger');
+const resource = require('./resource');
+
+module.exports = {
+  gen,
+  logger,
+  resource
+};
