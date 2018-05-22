@@ -6,7 +6,10 @@ module.exports = {
   repos: require('./RepoManager/repos'),
   runtimes: require('./RuntimeManager/runtimes'),
   users: require('./UserManager/users'),
-  roles: require('./RolesManager/roles'),
+  roles: require('./UserManager/roles'),
+  organizations: require('./UserManager/organizations'),
+  groups: require('./UserManager/groups'),
+  authorities: require('./UserManager/authorities'),
   categories: require('./CategoriesManager/categories'),
   statistics: require('./Statistics/statistics')
 };

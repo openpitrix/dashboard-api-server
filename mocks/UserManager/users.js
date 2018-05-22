@@ -10,14 +10,15 @@ module.exports = (function() {
 
   for (let i = 0; i < totalCount; i++) {
     users.push({
-      id: gen.genResourceId('users'),
+      uset_id: gen.genResourceId('users'),
       username: faker.random.arrayElement(names),
       description: faker.lorem.paragraph(),
       status: faker.random.arrayElement(status),
       email: faker.internet.email(),
       role: faker.random.arrayElement(roles),
-      created: faker.date.past(),
-      last_modified: faker.date.recent()
+      create_time: faker.date.past(),
+      status_time: faker.date.recent(),
+      update_time: faker.date.recent()
     });
   }
 

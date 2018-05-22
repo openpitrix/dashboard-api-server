@@ -39,6 +39,21 @@ module.exports = {
     prefix: 'role-',
     idKey: 'role_id'
   },
+  organizations: {
+    singular: 'organization',
+    prefix: 'org-',
+    idKey: 'organization_id'
+  },
+  groups: {
+    singular: 'group',
+    prefix: 'group-',
+    idKey: 'group_id'
+  },
+  authorities: {
+    singular: 'authority',
+    prefix: 'aut-',
+    idKey: 'authority_id'
+  },
   app_versions: {
     singular: 'app_version',
     prefix: 'appv-',
@@ -53,5 +68,10 @@ module.exports = {
     singular: 'statistics',
     prefix: 'statistics-',
     idKey: 'statistic_id'
+  },
+  cluster_nodes: {
+    singular: 'cluster_node',
+    prefix: 'node-',
+    idKey: 'node_id'
   }
 };
