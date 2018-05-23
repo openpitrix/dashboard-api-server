@@ -3,3 +3,4 @@
 .ash_history
 snapshots/
 build/
+coverage/

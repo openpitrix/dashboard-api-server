@@ -1,0 +1,11 @@
+{
+  "bail": true,
+  "verbose": true,
+  "transform": {},
+  "coverageDirectory": "./coverage/",
+  "collectCoverageFrom": [
+    "mocks/**/*.js",
+    "utils/*.js",
+    "!**/node_modules/**"
+  ]
+}
